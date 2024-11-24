@@ -9,7 +9,7 @@ The project was developed in collaboration with the Smart Green City Department,
 1. Clone the repository: git clone https://github.com/IrynaKuzz/Population-growth-in-Konstanz.git
 2. cd explore-observable-framework
 3. npm install
-4. npm start
+4. npm run dev
 5. Open the application in your browser at: http://localhost:3000
 
 EXPLORE-OBSERVABLE-FRAMEWORK/  
