@@ -1,3 +1,11 @@
+# Description  
+This project visualizes population growth and development trends in the city of Konstanz, located in the Baden-Württemberg region of Germany. The interactive dashboard was created using the Observable framework for the Datenmanagement und Statistik – Stadt Konstanz department.
+
+The goal of the project is to provide a clear, user-friendly tool for analyzing demographic data, which can be utilized for research as well as for decision-making in urban policy and planning. The data for this project was sourced from the Infoportal Offene Daten – Stadt Konstanz.
+
+The project was developed in collaboration with the Green City Department, under the guidance of Dr. Andreas Schneck.
+
+
 Preview of `main` branch (latest succesful CI build): https://sgc-dashboard-d0cafa4cdadf.s3-eu-central-2.ionoscloud.com/index.html
 
 # SGC Observable Framework Test
