@@ -1,63 +1,45 @@
 # Description  
-This project visualizes population growth and development trends in the city of Konstanz, located in the Baden-Württemberg region of Germany. The interactive dashboard was created using the Observable framework for <b>the Datenmanagement und Statistik – Stadt Konstanz</b> department.
+This project visualizes population growth and development trends in the city of Konstanz, located in the Baden-Württemberg region of Germany. The interactive dashboard was created using the <a href="https://observablehq.com/">Observable </a>framework for <b>the Datenmanagement und Statistik – Stadt Konstanz</b> department.
 
 The goal of the project is to provide a clear, user-friendly tool for analyzing demographic data, which can be utilized for research as well as for decision-making in urban policy and planning. The data for this project was sourced from the <a href="https://offenedaten-konstanz.de/" >Infoportal Offene Daten – Stadt Konstanz</a>.
 
 The project was developed in collaboration with the Smart Green City Department, under the guidance of Dr. Andreas Schneck.
 
+# Installation
+1. Clone the repository: git clone https://github.com/IrynaKuzz/Population-growth-in-Konstanz.git
+2. cd explore-observable-framework
+3. npm install
+4. npm start
+5. Open the application in your browser at: http://localhost:3000
 
-Preview of `main` branch (latest succesful CI build): https://sgc-dashboard-d0cafa4cdadf.s3-eu-central-2.ionoscloud.com/index.html
+EXPLORE-OBSERVABLE-FRAMEWORK/  
+├── brand/  
+├── dist/  
+├── node_modules/  
+├── notebooks/  
+├── raw_data/  
+├── src/  
+│   ├── .observablehq/  
+│   ├── assets/  
+│   ├── components/  
+│   │   ├── einwohner_altersgruppen_abs.js  
+│   │   ├── einwohner_altersgruppen_erwerbsfaehige_abs.js  
+│   │   ├── einwohner_entwicklung_abs.js  
+│   │   ├── einwohner_entwicklung_rel.js  
+│   │   ├── einwohner_entwicklung.js  
+│   │   ├── einwohner_familienstand.js  
+│   │   ├── einwohner_map.js  
+│   │   ├── einwohner_staatsangehoerigkeit.js  
+│   │   └── einwohner_table.jsx  
+├── data/  
+├── icons/  
+├── .gitignore  
+├── einwohner.md  
+├── index.md  
+├── observablehq.config.js  
+├── package-lock.json  
+└── package.json  
 
-# SGC Observable Framework Test
 
-This is an [Observable Framework](https://observablehq.com/framework) project. To start the local preview server, run:
 
-```
-npm run dev
-```
 
-Then visit <http://localhost:3000> to preview your project.
-
-For more, see <https://observablehq.com/framework/getting-started>.
-
-## Project structure
-
-A typical Framework project looks like this:
-
-```ini
-.
-├─ src
-│  ├─ components
-│  │  └─ timeline.js           # an importable module
-│  ├─ data
-│  │  ├─ launches.csv.js       # a data loader
-│  │  └─ events.json           # a static data file
-│  ├─ example-dashboard.md     # a page
-│  ├─ example-report.md        # another page
-│  └─ index.md                 # the home page
-├─ .gitignore
-├─ observablehq.config.js      # the project config file
-├─ package.json
-└─ README.md
-```
-
-**`src`** - This is the “source root” — where your source files live. Pages go here. Each page is a Markdown file. Observable Framework uses [file-based routing](https://observablehq.com/framework/routing), which means that the name of the file controls where the page is served. You can create as many pages as you like. Use folders to organize your pages.
-
-**`src/index.md`** - This is the home page for your site. You can have as many additional pages as you’d like, but you should always have a home page, too.
-
-**`src/data`** - You can put [data loaders](https://observablehq.com/framework/loaders) or static data files anywhere in your source root, but we recommend putting them here.
-
-**`src/components`** - You can put shared [JavaScript modules](https://observablehq.com/framework/javascript/imports) anywhere in your source root, but we recommend putting them here. This helps you pull code out of Markdown files and into JavaScript modules, making it easier to reuse code across pages, write tests and run linters, and even share code with vanilla web applications.
-
-**`observablehq.config.js`** - This is the [project configuration](https://observablehq.com/framework/config) file, such as the pages and sections in the sidebar navigation, and the project’s title.
-
-## Command reference
-
-| Command           | Description                                              |
-| ----------------- | -------------------------------------------------------- |
-| `npm install`            | Install or reinstall dependencies                        |
-| `npm run dev`        | Start local preview server                               |
-| `npm run build`      | Build your static site, generating `./dist`              |
-| `npm run deploy`     | Deploy your project to Observable                        |
-| `npm run clean`      | Clear the local data loader cache                        |
-| `npm run observable` | Run commands like `observable help`                      |
