@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Einwohner | Stadtdaten Konstanz</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_import/components/einwohner_map.035f5315.js">
+<link rel="modulepreload" href="./_import/components/einwohner_entwicklung.bc11dbbb.js">
+<link rel="modulepreload" href="./_import/components/einwohner_familienstand.af6d9314.js">
+<link rel="modulepreload" href="./_import/components/einwohner_staatsangehoerigkeit.dfc69e7d.js">
+<link rel="modulepreload" href="./_import/components/einwohner_table.ed8181cb.js">
+<link rel="modulepreload" href="./_import/components/einwohner_entwicklung_abs.4df3bd2d.js">
+<link rel="modulepreload" href="./_import/components/einwohner_entwicklung_rel.b7274c4f.js">
+<link rel="modulepreload" href="./_import/components/einwohner_altersgruppen_rel.aef55d48.js">
+<link rel="modulepreload" href="./_import/components/einwohner_altersgruppen_abs.32063d40.js">
+<link rel="modulepreload" href="./_import/components/einwohner_altersgruppen_test.49d1da17.js">
+<link rel="modulepreload" href="./_npm/react@18.3.1/jsx-runtime._esm.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.15/_esm.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/_esm.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.js">
+<link rel="modulepreload" href="./_npm/react-dom@18.3.1/client._esm.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/_esm.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/_esm.js">
+<link rel="modulepreload" href="./_npm/react@18.3.1/_esm.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/react-dom@18.3.1/_esm.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/_esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/_esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/scheduler@0.23.2/_esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/_esm.js">
+
+    <link rel="icon" type="image/svg+xml" href="./_file/assets/favicon.6372ae97.svg">
+    <link rel="icon" type="image/png" href="./_file/assets/favicon.aef23c64.png">
+  
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+
+define({id: "7d1da337", inputs: ["stt_ew_alt_csv","display"], body: async (stt_ew_alt_csv,display) => {
+display(await(
+stt_ew_alt_csv
+))
+}});
+
+define({id: "772aff98", inputs: ["Inputs","Generators"], outputs: ["stadtteil_check_input","stadtteil_check"], body: (Inputs,Generators) => {
+const stadtteil_check_input = Inputs.toggle({
+  label: "Filter aktivieren",
+  value: false,
+});
+const stadtteil_check = Generators.input(stadtteil_check_input);
+return {stadtteil_check_input,stadtteil_check};
+}});
+
+define({id: "c1f6da21", inputs: ["Inputs","stadtteil_check","stadtteile_geojson","Generators"], outputs: ["stadtteil_select_input","stadtteil_select"], body: (Inputs,stadtteil_check,stadtteile_geojson,Generators) => {
+const stadtteil_select_input = Inputs.select(
+  (stadtteil_check) ? stadtteile_geojson.features : [ 'Gesamte Stadt' ],
+  {
+    label: "Stadtteil:",
+    format: (x) => (stadtteil_check) ? x.properties.STT_NAME : x,
+    disabled: !stadtteil_check,
+  }
+);
+const stadtteil_select = Generators.input(stadtteil_select_input);
+return {stadtteil_select_input,stadtteil_select};
+}});
+
+define({id: "99ac96f1", inputs: ["stadtteil_check","stadtteil_select"], outputs: ["id","stt"], body: (stadtteil_check,stadtteil_select) => {
+const id = stadtteil_check ?
+    stadtteil_select.properties.STT_ID : 0 ;
+const stt = stadtteil_check ?
+    `Stadtteil ${stadtteil_select.properties.STT_NAME}` :
+    stadtteil_select;
+return {id,stt};
+}});
+
+define({id: "517d9ec3", outputs: ["map_plot","entwicklung_plot","familienstand_plot","staatsangehoerigkeit_plot","Table","Card","absolut_plot","relativ_plot","altersgruppen_rel_plot","altersgruppen_abs_plot","altersgruppen_test_plot"], body: async () => {
+const [{map_plot}, {entwicklung_plot}, {familienstand_plot}, {staatsangehoerigkeit_plot}, {Table, Card}, {absolut_plot}, {relativ_plot}, {altersgruppen_rel_plot}, {altersgruppen_abs_plot}, {altersgruppen_test_plot}] = await Promise.all([import("./_import/components/einwohner_map.035f5315.js"), import("./_import/components/einwohner_entwicklung.bc11dbbb.js"), import("./_import/components/einwohner_familienstand.af6d9314.js"), import("./_import/components/einwohner_staatsangehoerigkeit.dfc69e7d.js"), import("./_import/components/einwohner_table.ed8181cb.js"), import("./_import/components/einwohner_entwicklung_abs.4df3bd2d.js"), import("./_import/components/einwohner_entwicklung_rel.b7274c4f.js"), import("./_import/components/einwohner_altersgruppen_rel.aef55d48.js"), import("./_import/components/einwohner_altersgruppen_abs.32063d40.js"), import("./_import/components/einwohner_altersgruppen_test.49d1da17.js")]);
+
+return {map_plot,entwicklung_plot,familienstand_plot,staatsangehoerigkeit_plot,Table,Card,absolut_plot,relativ_plot,altersgruppen_rel_plot,altersgruppen_abs_plot,altersgruppen_test_plot};
+}});
+
+define({id: "37533746", inputs: ["einwohner_csv"], outputs: ["maxYear"], body: (einwohner_csv) => {
+const maxYear = Math.max(...einwohner_csv.map((x) => x.Jahr));
+return {maxYear};
+}});
+
+define({id: "2224a3e5", mode: "jsx", inputs: ["ReactDOM","Table","einwohner_csv","einwohner_famStd_csv","einwohner_staatsangehoerigkeit_csv","id","width"], outputs: ["jsx","table","root"], body: async (ReactDOM,Table,einwohner_csv,einwohner_famStd_csv,einwohner_staatsangehoerigkeit_csv,id,width) => {
+const {jsx} = await import("./_npm/react@18.3.1/jsx-runtime._esm.js");
+const table = document.createElement("SPAN");
+const root = ReactDOM.createRoot(table);
+root.render(/* @__PURE__ */ jsx(Table, { einwohner_csv, einwohner_famStd_csv, einwohner_staatsangehoerigkeit_csv, id, width }));
+return {jsx,table,root};
+}});
+
+define({id: "0991ef9d", mode: "inline", inputs: ["stadtteil_check_input","display"], body: async (stadtteil_check_input,display) => {
+display(await(
+stadtteil_check_input
+))
+}});
+
+define({id: "687d3e4c", mode: "inline", inputs: ["stadtteil_select_input","display"], body: async (stadtteil_select_input,display) => {
+display(await(
+stadtteil_select_input
+))
+}});
+
+define({id: "40b058f0", mode: "inline", inputs: ["resize","map_plot","stadtteile_geojson","id","display"], body: async (resize,map_plot,stadtteile_geojson,id,display) => {
+display(await(
+resize((width) => map_plot(stadtteile_geojson, id, width))
+))
+}});
+
+define({id: "0d4fc4a7", mode: "inline", inputs: ["table","display"], body: async (table,display) => {
+display(await(
+table
+))
+}});
+
+define({id: "f9eec27a", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "f927aae2", mode: "inline", inputs: ["resize","absolut_plot","einwohner_csv","id","display"], body: async (resize,absolut_plot,einwohner_csv,id,display) => {
+display(await(
+resize((width) => absolut_plot(einwohner_csv, id, width))
+))
+}});
+
+define({id: "86cef814", inputs: ["Inputs","stadtteile_geojson","Generators"], outputs: ["compare_select_input","compare_select"], body: (Inputs,stadtteile_geojson,Generators) => {
+const compare_select_input = Inputs.select(
+  stadtteile_geojson.features,
+  {
+    label: "Vergleiche mit Stadtteil:",
+    format: (x) => x.properties.STT_NAME,
+  }
+);
+const compare_select = Generators.input(compare_select_input);
+return {compare_select_input,compare_select};
+}});
+
+define({id: "7e68d62d", inputs: ["compare_select"], outputs: ["compare_id"], body: (compare_select) => {
+const compare_id = compare_select.properties.STT_ID;
+return {compare_id};
+}});
+
+define({id: "f9eec27a-1", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "15574917", mode: "inline", inputs: ["compare_select_input","display"], body: async (compare_select_input,display) => {
+display(await(
+compare_select_input
+))
+}});
+
+define({id: "98040742", mode: "inline", inputs: ["resize","relativ_plot","einwohner_csv","id","compare_id","display"], body: async (resize,relativ_plot,einwohner_csv,id,compare_id,display) => {
+display(await(
+resize((width) => relativ_plot(einwohner_csv, id, compare_id, width))
+))
+}});
+
+define({id: "f9eec27a-2", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "0504fc54", mode: "inline", inputs: ["resize","familienstand_plot","einwohner_famStd_csv","id","display"], body: async (resize,familienstand_plot,einwohner_famStd_csv,id,display) => {
+display(await(
+resize((width) => familienstand_plot(einwohner_famStd_csv, id, width))
+))
+}});
+
+define({id: "f9eec27a-3", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "170dca35", mode: "inline", inputs: ["resize","staatsangehoerigkeit_plot","einwohner_staatsangehoerigkeit_csv","id","display"], body: async (resize,staatsangehoerigkeit_plot,einwohner_staatsangehoerigkeit_csv,id,display) => {
+display(await(
+resize((width) => staatsangehoerigkeit_plot(einwohner_staatsangehoerigkeit_csv, id, width))
+))
+}});
+
+define({id: "f9eec27a-4", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "646dda76", mode: "inline", inputs: ["resize","altersgruppen_rel_plot","stt_ew_alt_csv","id","display"], body: async (resize,altersgruppen_rel_plot,stt_ew_alt_csv,id,display) => {
+display(await(
+resize((width) => altersgruppen_rel_plot(stt_ew_alt_csv, id, width))
+))
+}});
+
+define({id: "f9eec27a-5", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "834a1eeb", mode: "inline", inputs: ["resize","altersgruppen_abs_plot","stt_ew_alt_csv","id","display"], body: async (resize,altersgruppen_abs_plot,stt_ew_alt_csv,id,display) => {
+display(await(
+resize((width) => altersgruppen_abs_plot(stt_ew_alt_csv, id, width))
+))
+}});
+
+define({id: "f9eec27a-6", mode: "inline", inputs: ["stt","display"], body: async (stt,display) => {
+display(await(
+stt
+))
+}});
+
+define({id: "3dacf959", mode: "inline", inputs: ["resize","altersgruppen_test_plot","stt_ew_alt_csv","id","display"], body: async (resize,altersgruppen_test_plot,stt_ew_alt_csv,id,display) => {
+display(await(
+resize((width) => altersgruppen_test_plot(stt_ew_alt_csv, id, width))
+))
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Stadtdaten Konstanz</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link observablehq-link-active"><a href="./einwohner.html">Einwohner</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block">
+  <div class="observablehq--inspect observablehq--error">SyntaxError: Unexpected token (2:0)</div>
+</div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:7d1da337:--></div>
+<h1 id="einwohner-in-konstanz" tabindex="-1"><a class="observablehq-header-anchor" href="#einwohner-in-konstanz">Einwohner in Konstanz</a></h1>
+<h2></h2>
+<!-- Global Stadtteil Selection: affect all plots on this dashboard -->
+<div class="observablehq observablehq--block"><!--:772aff98:--></div>
+<div class="observablehq observablehq--block"><!--:c1f6da21:--></div>
+<div class="observablehq observablehq--block"><!--:99ac96f1:--></div>
+<!-- Iryna's second select button
+```js
+const groupedData = d3.group(einwohner_csv, d => d.STT);
+//default value "Gesamtstadt"
+
+// removed element with key "Gesamtstadt" and sorted alphabetically
+const sortedData = Array.from(groupedData)
+  .filter(([key, values]) => key !== "Gesamtstadt")
+  .sort((a, b) => a[0].localeCompare(b[0]));
+
+const combinedData = sortedData.flatMap(item => item[1]);
+const groupedCombinedData = d3.group(combinedData, d => d.STT);
+
+const select_ort = view(
+  Inputs.select(
+    groupedCombinedData,
+    {label: html`<div class="st-title">Stadtteile:</div>`, unique: true}
+  )
+);
+```
+-->
+<div class="observablehq observablehq--block"><!--:517d9ec3:--></div>
+<div class="observablehq observablehq--block"><!--:37533746:--></div>
+<div class="observablehq observablehq--block"><!--:2224a3e5:--></div>
+<div class="grid grid-cols-2">
+  <div class="card">
+    <h2>Stadtteile</h2>
+    <h3>Dieses Dashboard kann auf Stadtteile gefiltert werden.</h3>
+    <observablehq-loading></observablehq-loading><!--:0991ef9d:-->
+    <observablehq-loading></observablehq-loading><!--:687d3e4c:-->
+    <observablehq-loading></observablehq-loading><!--:40b058f0:-->
+  </div>  
+  <observablehq-loading></observablehq-loading><!--:0d4fc4a7:-->
+  </div>
+
+<!--
+
+This one is redundant with the one after, right? Which one do we
+prefer for the final product?
+
+<div class="card">
+  <h2>Bevölkerungsentwicklung</h2>
+  <h3>${stt}</h3>
+  ${resize((width) => entwicklung_plot(einwohner_csv, id, width))}
+</div>
+
+-->
+<div class="card">
+  <h2>Bevölkerungsentwicklung</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a:--></h3>
+  <observablehq-loading></observablehq-loading><!--:f927aae2:-->
+</div>
+<div class="observablehq observablehq--block"><!--:86cef814:--></div>
+<div class="observablehq observablehq--block"><!--:7e68d62d:--></div>
+<div class="card">
+  <h2>Bevölkerungsentwicklung im Vergleich</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a-1:--></h3>
+  <observablehq-loading></observablehq-loading><!--:15574917:-->
+  <observablehq-loading></observablehq-loading><!--:98040742:-->
+</div>
+<div class="card">
+  <h2>Familienstand</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a-2:--></h3>
+  <observablehq-loading></observablehq-loading><!--:0504fc54:-->
+</div>
+<div class="card">
+  <h2>Staatsangehörigkeit</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a-3:--></h3>
+  <observablehq-loading></observablehq-loading><!--:170dca35:-->
+</div>
+<div class="card">
+  <h2>Altersstruktur der Wohnbevölkerung im Vergleich</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a-4:--></h3>
+  <observablehq-loading></observablehq-loading><!--:646dda76:-->
+</div>
+<div class="card">
+  <h2>Altersstruktur der Wohnbevölkerung im Vergleich</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a-5:--></h3>
+  <observablehq-loading></observablehq-loading><!--:834a1eeb:-->
+</div>
+<div class="card">
+  <h2>Altersstruktur der Wohnbevölkerung im Vergleich</h2>
+  <h3><observablehq-loading></observablehq-loading><!--:f9eec27a-6:--></h3>
+  <observablehq-loading></observablehq-loading><!--:3dacf959:-->
+</div>
+</main>
+<footer id="observablehq-footer">
+<div>Erstellt mit <a href="./observablehq.com">Observable</a> am 13.8.2024 um 14:22 Uhr.</div>
+</footer>
+</div>
